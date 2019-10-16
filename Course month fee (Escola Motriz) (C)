@@ -1,32 +1,32 @@
+
+  
 #include <stdio.h>
-#includes <curses.h>
+#include <curses.h>
 int main()
 {int alunosesperados,aulas,turmas=0;
 float receitaesperada,alunosporaula,mensalidadeesperada=0;
 float inadimplencia=10;
-printf("Ola, bem vindo(a) ao software de calculo de alunos e receita da escola motriz!\n")
-printf("Quantos alunos voce gostaria de ter matriculados e pagando?(maximo 400)\n")
+printf("Ola, bem vindo(a) ao software de calculo de alunos e receita da escola motriz!\n");
+printf("Quantos alunos voce gostaria de ter matriculados e pagando?(maximo 400)\n");
 scanf("%d",&alunosesperados);
-if (10<i&&i<400){
+if (10<alunosesperados&&alunosesperados<400){
 printf("Certo, e quantos reais de receita voce gostaria de ter por mes?(somente numeros, use\".\" para separar casas decimais.)\n");
 scanf("%f",&receitaesperada);
  printf("Otimo!, e esses alunos seriam divididos em quantas turmas?");
  scanf("%d",&turmas);
- printf("Quase la, diga-me agora qual a porcentagem(0 a 99) de alunos que nao pagam a mensalidade? (padrao 10)");
- scanf("%f",inadimplencia);
+ printf("Quase la, diga-me agora qual a porcentagem(0 a 100) de alunos que NAO pagam a mensalidade?");
+ scanf("%f",&inadimplencia);
  if(inadimplencia>=0&&inadimplencia<=99){
  alunosporaula=alunosesperados/turmas;
- mensalidadeesperada=(receitaesperada/(alunos*(1-inadimplencia/100));
+ mensalidadeesperada=(receitaesperada/(alunosesperados*(1-inadimplencia/100)));
  printf("bom, nesse caso teriamos %.0f alunos por turma, e para suprir a receita esperada, cada aluno deveria pagar a mensalidade de R$%.2f.",alunosporaula,mensalidadeesperada);
   timeout(5000);
 }else{
 printf("Porcentagem de inadimplentes invalida");
 timeout(2000);
-break;
 }
 }else {
 printf("valor invalido");
 timeout(2000);
-break;
 }
 }
