@@ -11,7 +11,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 int main()
 {int mes,ano,dia,diastotais=0;
 float semana =0;
-    printf("Em que mes estamos?\n");
+    printf("Em que mês estamos?\n");
     scanf("%d",&mes);
     printf("Em que ano estamos?\n");
     scanf("%d",&ano);
@@ -27,7 +27,7 @@ float semana =0;
     scanf("%f",&salarioh);
     dinheirorecebido=(semana-(semana*4/52))*5*8*salarioh; //semana menos as ferias, dasdas por semana/52 (ex50/52)*4, quando na ultima semana no ano 52/52, e igual a 1*4, reduzindo assim 4 semanas da conta de salario,o equivalente a um mes de ferias.
     printf("Voce ja recebeu R$%.2f esse ano, muito bem!\n", dinheirorecebido);
-    float salariodolares =dinheirorecebido/5.5;
+    float salariodolares =dinheirorecebido/4;
     printf("Em dolares voce teria recebido, no ano, U$%.2f\n",salariodolares);
     if (salariodolares<5000) {
     
